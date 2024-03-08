@@ -5,20 +5,10 @@
     import Projets from './projets/+page.svelte';
     import Services from './services/+page.svelte';
     import Contact from './contact/+page.svelte';
+    import Navbar from './navbar.svelte';
 
     //Import d'outils sveltekit
     import { slide } from 'svelte/transition';
-
-    //Section pour la navBar
-    let showNav = false;
-
-    function toggleNav(){
-        showNav = true
-    }
-
-    function hideNav(){
-        showNav = false
-    }
 
 </script>
 
@@ -55,28 +45,7 @@
 
     <nav>
 
-        <div class="logo container"
-            on:mouseover={toggleNav} 
-            on:mouseleave={hideNav}
-            on:focus={toggleNav}
-            on:blur={hideNav}
-            role="button" 
-            tabindex="0"  
-            aria-haspopup="true"
-            aria-expanded={showNav}>
-
-            <span class="material-symbols-outlined">
-                menu
-            </span>
-
-            {#if showNav} 
-            <a href="#a_propos" transition:slide={{duration: 100}}>.à propos</a>
-            <a href="#projets" transition:slide={{duration: 200}}>.projets</a>
-            <a href="#services" transition:slide={{duration: 300}}>.services</a>
-            <a href="#contact" transition:slide={{duration: 400}}>Contact</a>
-            {/if}
-            
-        </div>
+        <Navbar />
 
     </nav>
 
@@ -94,7 +63,7 @@
             display: block;
             width: 100%;
             height: 100vh;
-            background: black;
+            background: white;
             padding: 0;
             margin: 0; 
 
