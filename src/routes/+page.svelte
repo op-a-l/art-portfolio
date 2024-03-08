@@ -35,7 +35,7 @@
 
         .material-symbols-outlined {
             font-variation-settings:
-            'FILL' 100,
+            'FILL' 255,
             'wght' 600,
             'GRAD' 0,
             'opsz' 24;
@@ -87,25 +87,39 @@
     <style>
         .center{
             text-align: center;
+            background: black;
         }
 
         ._opal{
             display: block;
             width: 100%;
             height: 100vh;
-            background: red;
+            background: black;
             padding: 0;
             margin: 0; 
+
+            color: #A3D1AB;
+            font-family: "Libre Barcode 128 Text", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 50px;
         }
+
+        ._opal p{
+            font-family: "Quattrocento Sans", sans-serif;
+            font-size: 10px;
+
+        }
+
     </style>
 
     <div class="center _opal">
 
-        Bonjour, je suis 
+        <p>Bonjour, je suis </p>
 
         <h1>_opal</h1>
 
-        Compositeur de musiques électroniques
+        <p>Compositeur de musiques électroniques</p>
 
     </div>
 
