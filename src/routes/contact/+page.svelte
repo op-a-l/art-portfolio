@@ -1,5 +1,9 @@
-<h1>Contact</h1>
+<main>
 
-<p>
-    Page de contact
-</p>
+    <h1>Contact</h1>
+    
+    <p>
+        Page de contact
+    </p>
+
+</main>

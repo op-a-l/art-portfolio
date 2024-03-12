@@ -1,10 +1,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 <script>
-	import { fly } from 'svelte/transition'
-	import { quintOut } from 'svelte/easing';
+	import { fly, draw } from 'svelte/transition'
+    import { onMount } from 'svelte';
 
-	
 	let navLogo="menu";
 	
 	function changeState (){
@@ -18,17 +17,24 @@
 	let navLinks = ["Accueil", "Projets", "Mémoire", "Contact"];
 
 	let transition = 400;
+
+    let isVisible = false;
+
+    onMount(() => {
+        isVisible = true;
+    });
 </script>
 
 <style>
 	.material-symbols-outlined {
 	  font-variation-settings:
 	  'FILL' 0,
-	  'wght' 600,
+	  'wght' 300,
 	  'GRAD' 0,
 	  'opsz' 24;
 		color: black;
 		margin: 0;
+        font-size: 35px;
 	}
 
 	button{
@@ -42,6 +48,7 @@
 	.container{
 		display: flex;
 		flex-flow: column wrap;
+        gap: 10px;
 		padding: 10px;
 		width: 7%;
 		text-align: left;
@@ -49,10 +56,13 @@
 	}
 
 	ul a{
-		font-size: .8em;
+		font-size: 1.2em;
 		color: black;
 		cursor: pointer;
 		padding: 0;
+        text-decoration: none;
+        font-weight: 400;
+        font-family: "Quattrocento Sans", sans-serif;
 	}
 
 	div{
@@ -64,12 +74,15 @@
 </style>
 
 <div>
-	<button
-		on:click={changeState}>
-			<span class="material-symbols-outlined">
-				{@html navLogo}
-			</span>	
-	</button>
+        {#if isVisible}
+        <button
+            on:click={changeState}>
+            <span 
+            class="material-symbols-outlined">
+                {@html navLogo}
+            </span>	
+        </button>
+        {/if}
 	
 	{#if navLogo === "close"}
 		<ul 

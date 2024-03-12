@@ -5,6 +5,7 @@
     import Projets from './projets/+page.svelte';
     import Services from './services/+page.svelte';
     import Contact from './contact/+page.svelte';
+    import Opal from './opal/opal.svelte';
     import Navbar from './navbar.svelte';
 
     //Import d'outils sveltekit
@@ -53,45 +54,7 @@
 
 <body>
 
-    <style>
-        .center{
-            text-align: center;
-            background: black;
-        }
-
-        ._opal{
-            display: block;
-            width: 100%;
-            height: 100vh;
-            background: white;
-            padding: 0;
-            margin: 0; 
-
-            color: #A3D1AB;
-            font-family: "Libre Barcode 128 Text", system-ui;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 50px;
-        }
-
-        ._opal p{
-            font-family: "Quattrocento Sans", sans-serif;
-            font-size: 10px;
-
-        }
-
-    </style>
-
-    <div class="center _opal">
-
-        <p>Bonjour, je suis </p>
-
-        <h1>_opal</h1>
-
-        <p>Compositeur de musiques électroniques</p>
-
-    </div>
-
+    <Opal />
     <Apropos />
     <Projets />
     <Services />
