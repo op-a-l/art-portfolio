@@ -1,63 +1,38 @@
 <script>
+  //Import des pages à nester
+  import Apropos from "./a_propos/+page.svelte";
+  import Projets from "./projets/+page.svelte";
+  import Services from "./services/+page.svelte";
+  import Contact from "./contact/+page.svelte";
+  import TitlePage from "$lib/components/titlePage/titlePage.svelte";
+  import Navbar from "$lib/components/navbar/navbar.svelte";
 
-    //Import des pages à nester
-    import Apropos from './a_propos/+page.svelte';
-    import Projets from './projets/+page.svelte';
-    import Services from './services/+page.svelte';
-    import Contact from './contact/+page.svelte';
-    import Opal from './opal/opal.svelte';
-    import Navbar from './navbar.svelte';
-
-    //Import d'outils sveltekit
-    import { slide } from 'svelte/transition';
-
+  //Import d'outils sveltekit
+  import { slide } from "svelte/transition";
+  import Root from "postcss/lib/root";
 </script>
 
 <!-- Contenu de la page -->
-
-<header>
-
-    <style>
-
-        html, body{
-            margin: 0; 
-            padding: 0;
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings:
-            'FILL' 255,
-            'wght' 600,
-            'GRAD' 0,
-            'opsz' 24;
-        }
-
-        .container{
-            display: flex;
-            flex-direction: column;
-        }
-
-        nav{
-            position: fixed;
-            padding: 1em;
-        }
-
-    </style>
-
+<body>
+  <header>
     <nav>
-
-        <Navbar />
-
+      <Navbar />
     </nav>
 
-</header>
+    <TitlePage>
+      <div slot="hello">bienvenue chez</div>
+      <div slot="title">_<span>O</span>PAL</div>
+      <div slot="subTitle">compositeur de musique électronique</div>
+    </TitlePage>
+  </header>
 
-<body>
-
-    <Opal />
-    <Apropos />
+  <main>
     <Projets />
+    <Apropos />
     <Services />
-    <Contact />
+  </main>
 
+  <footer>
+    <Contact />
+  </footer>
 </body>
