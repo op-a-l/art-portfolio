@@ -13,13 +13,6 @@
 </div>
 
 <style>
-  :root {
-    --shadow-color: none;
-    --background-color: hsl(359, 100%, 84%);
-    --titlePage-color: var(--background-color);
-    --text-color: black;
-  }
-
   .my-container {
     display: flex;
     justify-content: center;

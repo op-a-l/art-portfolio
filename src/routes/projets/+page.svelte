@@ -1,45 +1,76 @@
 <script lang="ts">
-  import { Tab, TabItem } from "$lib/components/tab";
+  import { Tab, TabItem, TabTitle } from "$lib/components/tab";
 </script>
 
-<body class="flex justify-center">
-  <div class="w-3/5">
-    <h1 class="pb-3" id="Projets">.projets</h1>
+<body>
+  <div class="projets">
+    <h1 id="Projets">.projets</h1>
     <Tab>
-      <TabItem image="https://api.glitch.cool/uploads/cover_5a94df0144.jpg">
-        <div slot="tabTitle">_nodes everywhere</div>
-        <div slot="contentTitle">Création autour d'une recherche</div>
-        <div slot="contentDesc">
-          Le projet est coool Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nulla tristique sem sed diam viverra, et congue metus viverra.
-          Nulla eu mi sit amet enim consequat commodo. Vivamus tincidunt, diam
-          porttitor luctus imperdiet, lacus felis auctor quam, in tincidunt nunc
-          enim sit amet mauris. Nam eget lectus volutpat, aliquet lectus vitae,
-          vehicula nisl. Nunc non tempor orci.
-        </div>
-      </TabItem>
-      <!-- <TabItem image="https://f4.bcbits.com/img/a2013469324_10.jpg">
-        <div slot="tabTitle">_house</div>
-        <div slot="contentTitle">Faire danser les corps</div>
-        <div slot="contentDesc">
-          Cras velit urna, scelerisque in dictum hendrerit, euismod a nisi.
-          Pellentesque dictum faucibus dapibus. Fusce ut ante egestas, pharetra
-          mauris at, sagittis lectus. Ut in euismod elit. Vivamus fermentum,
-          ante scelerisque gravida eleifend, purus nisl malesuada sapien,
-          ultrices elementum nisl urna eget tellus. Mauris arcu ex, dignissim
-          eget placerat vitae, suscipit sed dolor.
-        </div>
-      </TabItem> -->
+      <div class="tabTitles">
+        <TabTitle>
+          <h2 slot="tabTitle">_nodes-everywhere</h2>
+        </TabTitle>
+        <TabTitle>
+          <h2 slot="tabTitle">_samples-everywhere</h2>
+        </TabTitle>
+        <TabTitle>
+          <h2 slot="tabTitle">_at-the-center-of-it-all</h2>
+        </TabTitle>
+
+        <!-- <TabTitle>
+          <h2 slot="tabTitle">_samples-everywhere</h2>
+        </TabTitle> -->
+      </div>
+      <div class="tabContent">
+        <TabItem image="https://api.glitch.cool/uploads/cover_ab41c89410.jpg">
+          <h3 slot="contentTitle">La création autour d'une recherche</h3>
+          <p slot="contentDesc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum
+          </p>
+        </TabItem>
+        <!-- <TabItem>
+          <h3 slot="contentTitle">
+            Un pack de sample de concert avec un travail sur l'organicité
+          </h3>
+          <p slot="contentDesc">
+            Un pack avec plus de 300 samples organiques selon les définitions
+            données dans mon mémoire
+          </p>
+        </TabItem> -->
+      </div>
     </Tab>
   </div>
 </body>
 
 <style>
   body {
-    display: flex;
-    width: 100%;
     height: 100vh;
     background-color: var(--background-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 3rem;
+  }
+
+  .tabTitles {
+    background: transparent;
+    height: auto;
+    border-radius: inherit;
+  }
+
+  .projets {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background: transparent;
+    width: 65%;
   }
 
   h1 {
@@ -47,5 +78,7 @@
     font-style: italic;
     font-family: "Montserrat", sans-serif;
     font-weight: bolder;
+    padding-bottom: 3rem;
+    background-color: transparent;
   }
 </style>

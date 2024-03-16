@@ -36,3 +36,23 @@
     <Contact />
   </footer>
 </body>
+
+<style>
+  :root {
+    --shadow-color: none;
+    --background-color: hsl(359, 100%, 84%);
+    --titlePage-color: var(--background-color);
+    --text-color: black;
+  }
+
+  body {
+    width: 100%;
+    height: auto;
+  }
+
+  main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+</style>

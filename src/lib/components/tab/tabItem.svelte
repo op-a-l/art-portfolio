@@ -3,12 +3,6 @@
 </script>
 
 <div class="tabItem">
-  <aside>
-    <button class="title">
-      <slot name="tabTitle" />
-    </button>
-  </aside>
-
   <div class="content">
     <h2 class="contentTitle">
       <slot name="contentTitle" />
@@ -28,53 +22,46 @@
   .tabItem {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
     width: 100%;
     padding: 2rem;
-  }
-
-  aside {
-    /* background-color: red; */
-    flex: 2;
-
-    display: grid;
-    align-items: center;
-    justify-items: end;
-  }
-
-  aside button {
-    text-align: right;
-    padding-right: 2rem;
-    font-family: "Roboto", sans-serif;
-    font-size: large;
-    width: 3rem;
-    height: 3rem;
+    background: transparent;
   }
 
   .content {
-    flex: 5;
     display: flex;
-    justify-content: right;
+    justify-content: cente;
     align-items: center;
     margin: 1rem;
     flex-flow: column nowrap;
+
+    width: 100%;
   }
 
   .content .contentTitle {
-    font-family: "Roboto", sans-serif;
-    font-size: medium;
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
     text-align: left;
+    font-weight: 600;
     padding-bottom: 1rem;
+    width: 65%;
   }
 
   .content img {
-    width: 60%;
-    height: 15rem;
+    width: 100%;
+    height: 7rem;
     object-fit: cover;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-radius: none;
   }
 
   .content .contentDesc {
     text-align: justify;
     align-items: center;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    font-weight: 400;
+    width: 100%;
   }
 </style>
