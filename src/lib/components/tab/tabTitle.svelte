@@ -1,5 +1,15 @@
+<script lang="ts">
+  import { activeId } from "./activeId";
+
+  export let thisId = "undefined";
+
+  function setActive() {
+    $activeId = thisId;
+  }
+</script>
+
 <div>
-  <button>
+  <button on:click={setActive}>
     <slot name="tabTitle" />
   </button>
 </div>
@@ -10,9 +20,11 @@
     width: 100%;
     padding: 1rem;
 
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
     text-align: right;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-weight: 600;
+    font-variation-settings: "wght" 700;
 
     border-radius: 0 5px 5px 0;
   }

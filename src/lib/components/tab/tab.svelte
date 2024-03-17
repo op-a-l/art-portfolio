@@ -1,11 +1,3 @@
-<script context="module" lang="ts">
-</script>
-
-<script lang="ts">
-  import TabItem from "$lib/components/tab/tabItem.svelte";
-  import TabTitle from "$lib/components/tab/tabTitle.svelte";
-</script>
-
 <div class="tab">
   <slot />
 </div>

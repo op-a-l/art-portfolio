@@ -1,22 +1,29 @@
 <script>
+  import { activeId } from "./activeId";
+
   export let image = "undefined";
+  export let thisId = "undefined";
+
+  $: active = $activeId === thisId;
 </script>
 
-<div class="tabItem">
-  <div class="content">
-    <h2 class="contentTitle">
-      <slot name="contentTitle" />
-    </h2>
+{#if active}
+  <div class="tabItem">
+    <div class="content">
+      <h2 class="contentTitle">
+        <slot name="contentTitle" />
+      </h2>
 
-    {#if image != "undefined"}
-      <img src={image} alt="" />
-    {/if}
+      {#if image != "undefined"}
+        <img src={image} alt="" />
+      {/if}
 
-    <p class="contentDesc">
-      <slot name="contentDesc" />
-    </p>
+      <p class="contentDesc">
+        <slot name="contentDesc" />
+      </p>
+    </div>
   </div>
-</div>
+{/if}
 
 <style>
   .tabItem {
@@ -30,7 +37,7 @@
 
   .content {
     display: flex;
-    justify-content: cente;
+    justify-content: center;
     align-items: center;
     margin: 1rem;
     flex-flow: column nowrap;
@@ -41,10 +48,11 @@
   .content .contentTitle {
     font-family: "Montserrat", sans-serif;
     font-size: large;
-    text-align: left;
+    text-align: center;
     font-weight: 600;
+    font-variation-settings: "wght" 700;
     padding-bottom: 1rem;
-    width: 65%;
+    width: 100%;
   }
 
   .content img {
@@ -59,9 +67,9 @@
     text-align: justify;
     align-items: center;
     text-align: left;
-    font-family: "Roboto", sans-serif;
-    font-size: small;
-    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+    font-variation-settings: "wght" 400;
     width: 100%;
   }
 </style>
