@@ -35,35 +35,14 @@
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum
+            <br />
+            <a
+              href="https://soundcloud.com/tournesol-840734247/sets/the-center-of-it-all/s-KBxNkBWnJ6l?si=85461404d3a844e899a25236eaaf5af6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+              target="_blank"
+            >
+              <i class="fa-brands fa-soundcloud" />
+            </a>
           </p>
-
-          <iframe
-            title="Liste de lecture"
-            width="100%"
-            height="300"
-            scrolling="no"
-            frameborder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1781534394%3Fsecret_token%3Ds-KBxNkBWnJ6l&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-          ></iframe>
-          <div
-            style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
-          >
-            <a
-              href="https://soundcloud.com/tournesol-840734247"
-              title="_opal"
-              target="_blank"
-              style="color: #cccccc; text-decoration: none;">_opal</a
-            >
-            ·
-            <a
-              href="https://soundcloud.com/tournesol-840734247/sets/the-center-of-it-all/s-KBxNkBWnJ6l"
-              title="_the center of it all"
-              target="_blank"
-              style="color: #cccccc; text-decoration: none;"
-              >_the center of it all</a
-            >
-          </div>
         </TabItem>
         <TabItem
           image="https://f4.bcbits.com/img/a4160448333_16.jpg"
@@ -108,6 +87,9 @@
   }
 
   .tabTitles {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
     background: transparent;
     height: auto;
     border-radius: inherit;
@@ -117,6 +99,11 @@
   .tabContent {
     min-height: 30rem;
     height: fit-content;
+  }
+
+  .contentDesc {
+    display: flex;
+    gap: 1rem;
   }
 
   .projets {
@@ -134,5 +121,10 @@
     font-weight: bolder;
     padding-bottom: 3rem;
     background-color: transparent;
+  }
+
+  .fa-brands {
+    font-size: 2rem;
+    align-self: right;
   }
 </style>

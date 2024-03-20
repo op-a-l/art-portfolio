@@ -1,11 +1,10 @@
-<script>
+<script lang="ts">
   //Import des pages à nester
   import Apropos from "./a_propos/+page.svelte";
   import Projets from "./projets/+page.svelte";
   import Services from "./services/+page.svelte";
   import Contact from "./contact/+page.svelte";
   import TitlePage from "$lib/components/titlePage/titlePage.svelte";
-  import Navbar from "$lib/components/navbar/navbar.svelte";
 
   //Import d'outils sveltekit
   import { slide } from "svelte/transition";
@@ -15,13 +14,9 @@
 <!-- Contenu de la page -->
 <body>
   <header>
-    <nav>
-      <Navbar />
-    </nav>
-
     <TitlePage>
-      <div slot="hello">bienvenue chez</div>
-      <div slot="title">_<span>O</span>PAL</div>
+      <div slot="hello">Bonjour, je suis</div>
+      <div slot="title">_OPAL</div>
       <div slot="subTitle">compositeur de musique électronique</div>
     </TitlePage>
   </header>
@@ -43,6 +38,8 @@
     --background-color: hsl(359, 100%, 84%);
     --titlePage-color: var(--background-color);
     --text-color: black;
+    --navbar-logo-size: 2rem;
+    --text-color: hsl(180, 100%, 84%);
   }
 
   body {

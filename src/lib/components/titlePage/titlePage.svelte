@@ -30,8 +30,6 @@
     gap: 1rem;
 
     background-color: var(--titlePage-color, hsl(47, 100%, 50%));
-    box-shadow: 0px 0px 5px var(--shadow-color, black);
-    border-radius: 10px;
     width: 45%;
     height: fit;
     padding: 3em;
@@ -39,24 +37,24 @@
     align-items: center;
 
     color: var(--text-color, whitesmoke);
-    border: 1rem;
-    border-color: var(--border-color, black);
   }
 
   .before {
-    font-size: large;
-    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
   }
 
   .title {
-    font-size: 7rem;
+    font-size: 10rem;
     font-style: italic;
     font-family: "Montserrat", sans-serif;
     font-weight: bolder;
   }
 
   .after {
-    font-size: large;
-    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
   }
 </style>

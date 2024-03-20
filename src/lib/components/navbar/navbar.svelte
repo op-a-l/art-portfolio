@@ -12,7 +12,7 @@
     }
   }
 
-  let navLinks = ["Accueil", "Projets", "Mémoire", "Contact"];
+  const navLinks = ["Accueil", "Projets", "Mémoire", "Contact"];
 
   let transition = 400;
 </script>
@@ -53,11 +53,16 @@
       "opsz" 24;
     color: var(--navbar-color, white);
     margin: 0;
+    font-size: var(--navbar-logo-size, 2rem);
   }
 
   .navbar {
     padding-left: 1rem;
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    background-color: transparent;
+    height: auto;
   }
 
   button {
