@@ -1,9 +1,6 @@
 <script lang="ts">
   //Import des pages à nester
-  import Apropos from "./a_propos/+page.svelte";
-  import Projets from "./projets/+page.svelte";
-  import Services from "./services/+page.svelte";
-  import Contact from "./contact/+page.svelte";
+  import Projets from "./projets.svelte";
   import TitlePage from "$lib/components/titlePage/titlePage.svelte";
 
   //Import d'outils sveltekit
@@ -23,13 +20,7 @@
 
   <main>
     <Projets />
-    <Apropos />
-    <Services />
   </main>
-
-  <footer>
-    <Contact />
-  </footer>
 </body>
 
 <style>

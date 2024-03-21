@@ -30,7 +30,7 @@
     gap: 1rem;
 
     background-color: var(--titlePage-color, hsl(47, 100%, 50%));
-    width: 45%;
+    width: 100%;
     height: fit;
     padding: 3em;
     justify-content: center;
