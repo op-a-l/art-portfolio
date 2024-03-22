@@ -2,6 +2,7 @@
   //Import des pages à nester
   import Projets from "./projets.svelte";
   import TitlePage from "$lib/components/titlePage/titlePage.svelte";
+  import Navbar from "$lib/components/navbar/navbar.svelte";
 
   //Import d'outils sveltekit
   import { slide } from "svelte/transition";
@@ -11,6 +12,7 @@
 <!-- Contenu de la page -->
 <body>
   <header>
+    <Navbar />
     <TitlePage>
       <div slot="hello">Bonjour, je suis</div>
       <div slot="title">_OPAL</div>
@@ -28,7 +30,6 @@
     --shadow-color: none;
     --background-color: hsl(359, 100%, 84%);
     --titlePage-color: var(--background-color);
-    --text-color: black;
     --navbar-logo-size: 2rem;
     --text-color: hsl(180, 100%, 84%);
   }
@@ -36,6 +37,8 @@
   body {
     width: 100%;
     height: auto;
+    padding: 0;
+    margin: 0;
   }
 
   main {

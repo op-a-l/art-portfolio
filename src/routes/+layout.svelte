@@ -1,9 +1,16 @@
 <script>
-  import "./app.css";
-  import Navbar from "$lib/components/navbar/navbar.svelte";
   import "@fortawesome/fontawesome-free/css/all.min.css";
+  import "open-props/style";
 </script>
 
-<Navbar />
+<body>
+  <slot />
+</body>
 
-<slot />
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+</style>

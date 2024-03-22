@@ -77,13 +77,13 @@
 
 <style>
   body {
-    height: 100vh;
+    height: 100%;
     background-color: var(--background-color);
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 3rem;
+    padding-bottom: 0;
   }
 
   .tabTitles {
@@ -93,7 +93,7 @@
     background: transparent;
     height: auto;
     border-radius: inherit;
-    padding: 1rem 0 1rem 0;
+    padding-inline: 1rem 0 1rem 0;
   }
 
   .tabContent {
@@ -111,11 +111,11 @@
     flex-flow: column nowrap;
     align-items: center;
     background: transparent;
-    width: 65%;
+    width: 75%;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: var(--font-size-1);
     font-style: italic;
     font-family: "Montserrat", sans-serif;
     font-weight: bolder;
